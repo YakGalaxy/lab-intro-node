@@ -28,7 +28,15 @@ class SortedList {
     } else throw new Error("EmpySortedList");
   }
 
-  min() {}
+  min() {
+    if (this.items != "") {
+      this.items.sort(function (a, b) {
+        return a - b;
+      });
+      let lowest = this.items[0];
+      return lowest;
+    } else throw new Error("EmpySortedList");
+  }
 
   sum() {}
 
